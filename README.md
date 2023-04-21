@@ -21,6 +21,7 @@ Return the weight of the last remaining stone. If there are no stones left, retu
 2) How to implement ALGOS?
 
 This is the original code solution:
+
     def lastStoneWeight(stones):
             while len(stones) > 1:
                 stones.sort()
@@ -34,6 +35,7 @@ This is the original code solution:
             return 0
 
 Implementing ALGOS looks like this:
+
     import search1D
     def lastStoneWeight(stones):
             while len(stones) > 1:
