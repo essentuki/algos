@@ -1,15 +1,19 @@
 class OneDimCell:
     """Represents a cell or element in an array. It has BKG and TXT colors."""
     BKG_COLOR = {'RESET' : '\u001b[0m', 
-                'BLACK' : '\u001b[40m', 
-                'WHITE' : '\u001b[47m',    
-                'LIGHT_WHITE' : '\u001b[47;1m', 
-                'CYAN' : '\u001b[46;1m',
-                'MAGENTA' : '\u001b[45;1m'
+                'BLACK'  : '\u001b[40m', 
+                'RED'    : '\u001b[41m', 
+                'GREEN'  : '\u001b[42m', 
+                'YELLOW' : '\u001b[43m', 
+                'BLUE'   : '\u001b[44m',
+                'WHITE'  : '\u001b[47m',    
+                'CYAN'   : '\u001b[46;1m',
+                'MAGENTA': '\u001b[45;1m',
+                'LIGHT_WHITE' : '\u001b[47;1m'
                 }
     TXT_COLOR = {'WHITE' : '\u001b[37;1m', 
-                'BLACK' : '\u001b[30;1m', 
-                'RED' : '\u001b[31;1m'
+                'BLACK'  : '\u001b[30;1m', 
+                'RED'    : '\u001b[31;1m'
                 }
 
 class Target(OneDimCell): 
@@ -18,7 +22,7 @@ class Target(OneDimCell):
         self.target_value = target_value
     
     def print_to_screen(self):
-        print(f"{Target.BKG_COLOR['CYAN']}{Target.TXT_COLOR['WHITE']} {self.target_value} "
+        print(f"{Target.BKG_COLOR['RED']}{Target.TXT_COLOR['WHITE']} {self.target_value} "
             + f"{Target.BKG_COLOR['RESET']}", end = ' '
             )
 
@@ -51,6 +55,26 @@ class Actual(OneDimCell):
             + f"{Actual.BKG_COLOR['RESET']}", end = ' '
             )
 
+class LeftPointer(OneDimCell):
+    """Represents the left pointer in two pointers solutions. It needs a value."""
+    def __init__(self, visited_value):
+        self.visited_value = visited_value
+    
+    def print_to_screen(self):
+        print(f"{Actual.BKG_COLOR['GREEN']}{Actual.TXT_COLOR['WHITE']} {self.visited_value} "
+            + f"{Actual.BKG_COLOR['RESET']}", end = ' '
+            )
+
+class RightPointer(OneDimCell):
+    """Represents the right pointer in two pointers solutions. It needs a value."""
+    def __init__(self, visited_value):
+        self.visited_value = visited_value
+    
+    def print_to_screen(self):
+        print(f"{Actual.BKG_COLOR['BLUE']}{Actual.TXT_COLOR['BLACK']} {self.visited_value} "
+            + f"{Actual.BKG_COLOR['RESET']}", end = ' '
+            )
+
 def main():
     tCell = Target('T')
     tCell.print_to_screen()
@@ -63,6 +87,14 @@ def main():
 
     aCell = Actual('A')
     aCell.print_to_screen()
+    
+    lCell = LeftPointer('L')
+    lCell.print_to_screen()
+    
+    rCell = RightPointer('R')
+    rCell.print_to_screen()
+    
+    print("\n")
 
 if __name__ == '__main__':
     main()
