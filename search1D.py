@@ -23,10 +23,10 @@ class OneDimSearch:
             if j == self.target:
                 targetCell.print_to_screen()
             elif j == left:
-                leftCell = cells.LeftPointer(left)
+                leftCell = cells.LeftPointer(j)
                 leftCell.print_to_screen()
             elif j == right:
-                rightCell = cells.RightPointer(right)
+                rightCell = cells.RightPointer(j)
                 rightCell.print_to_screen()
             elif j in visited:
                 visitedCell = cells.Visited(j)
@@ -58,10 +58,10 @@ class OneDimSearch:
                 rightCell = cells.RightPointer(val)
                 rightCell.print_to_screen()
             elif j in visited:
-                visitedCell = cells.Visited(j)
+                visitedCell = cells.Visited(val)
                 visitedCell.print_to_screen()
             elif j == actual:
-                actualCell = cells.Actual(j)
+                actualCell = cells.Actual(val)
                 actualCell.print_to_screen()
             else:
                 notVisitedCell.print_to_screen()

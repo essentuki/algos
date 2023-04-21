@@ -24,10 +24,10 @@ class TwoDimSearch:
                 if entry == self.target:
                     targetCell.print_to_screen()
                 elif entry == left:
-                    leftCell = cells.LeftPointer(left)
+                    leftCell = cells.LeftPointer(entry)
                     leftCell.print_to_screen()
                 elif entry == right:
-                    rightCell = cells.RightPointer(right)
+                    rightCell = cells.RightPointer(entry)
                     rightCell.print_to_screen()
                 elif entry in visited:
                     visitedCell = cells.Visited(entry)
