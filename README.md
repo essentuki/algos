@@ -65,7 +65,7 @@ ALGOS is called at each moment to capture a 'snapshot' of the current state of o
 It is called twice - first to identify the position of the last two numbers, and then to 
 remove them and append their difference.
 
-LeetCode offers the following explanation for their example:
+LeetCode offers the following explanation for its example:
 
  Input: stones = [2,7,4,1,8,1]
 
