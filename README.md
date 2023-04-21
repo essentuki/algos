@@ -5,7 +5,7 @@ Aside from any understanding that one could have, about data structures and sear
 possessing the chance of visualizing what our code is actually doing helps deepen our
 understanding and sometimes even finding bugs.
 
-1) EXAMPLE: 
+## EXAMPLE: 
 The following is a LeetCode problem (No. 5). It is called the Last Stone Weight and it is considered easy. 
 The statement goes as follows:
 
@@ -18,7 +18,7 @@ We are playing a game with the stones. On each turn, we choose the heaviest two 
 At the end of the game, there is at most one stone left.
 Return the weight of the last remaining stone. If there are no stones left, return 0.
 
-2) How to implement ALGOS?
+## How to implement ALGOS?
 
 This is the original code solution:
 
@@ -66,19 +66,13 @@ as we first identify the position of the last two numbers and after removing the
 
 LeetCode offers the following explanation for their example:
 
-Input: stones = [2,7,4,1,8,1]
-
-Output: 1
-
-Explanation: 
-
-We combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,
-
-we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
-
-we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
-
-we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of the last stone.
+ Input: stones = [2,7,4,1,8,1]
+ Output: 1
+ Explanation: 
+- We combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,
+- we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
+- we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
+- we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of the last stone.
 
 By implementing ALGOS the user can see the following process:
 
