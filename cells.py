@@ -75,6 +75,16 @@ class RightPointer(OneDimCell):
             + f"{Actual.BKG_COLOR['RESET']}", end = ' '
             )
 
+class LinkedCell(OneDimCell):
+    """Represents a node in a linked list. It needs a value."""
+    def __init__(self, visited_value):
+        self.visited_value = visited_value
+    
+    def print_to_screen(self):
+        print(f"{Actual.BKG_COLOR['YELLOW']}{Actual.TXT_COLOR['BLACK']} {self.visited_value} "
+            + f"{Actual.BKG_COLOR['RESET']}", end = '->-'
+            )
+
 def main():
     tCell = Target('T')
     tCell.print_to_screen()
@@ -88,11 +98,14 @@ def main():
     aCell = Actual('A')
     aCell.print_to_screen()
     
-    lCell = LeftPointer('L')
-    lCell.print_to_screen()
+    lPCell = LeftPointer('L')
+    lPCell.print_to_screen()
     
-    rCell = RightPointer('R')
-    rCell.print_to_screen()
+    rPCell = RightPointer('R')
+    rPCell.print_to_screen()
+    
+    lCell = LinkedCell('N')
+    lCell.print_to_screen()
     
     print("\n")
 
