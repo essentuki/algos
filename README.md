@@ -43,7 +43,7 @@ Implementing ALGOS looks like this:
 
             # --------- ALGOS starts here ---------
             state = search1D.OneDimSearch(stones, None, 1)
-            state.print_visited_indices(range(len(stones)), None, len(stones)-2, len(stones)-1)
+            state.print_state(range(len(stones)), None, len(stones)-2, len(stones)-1)
             # --------- ALGOS  ends here  ---------
 
             y, x = stones[-1], stones[-2]
@@ -54,7 +54,7 @@ Implementing ALGOS looks like this:
 
             # --------- ALGOS starts here ---------
             state = search1D.OneDimSearch(stones, None, 1)
-            state.print_visited_indices(range(len(stones)), None, len(stones)-2, len(stones)-1)
+            state.print_state(range(len(stones)), None, len(stones)-2, len(stones)-1)
             # --------- ALGOS  ends here  ---------
 
         if stones: 
